@@ -21,6 +21,19 @@
 </head>
 <body>
     <script>
+			var tour = {
+				name:"Major World Cities",
+				author:"Wystan Way",
+				description:"Tour of major world cities. (Based On Population)",
+				places:[
+					{
+						name:"Tokyo",
+						description:"Tokyo is the largest city in the world. And the capital of Japan.",
+						lon:"139.839478",
+						lat:"35.652832",
+					},
+				],
+			};
 			var frames = 1;
 			var favicon = document.getElementById('favicon');
 			var animationInterval = setInterval(function() {
@@ -39,7 +52,7 @@
 			//Define map projection
 			var projection = d3.geoEquirectangular()
 								   .translate([w/2, h/2])
-								   .scale([w * 0.16]);
+								   .scale([1,1]);
 
 			//Define path generator
 			var path = d3.geoPath()
@@ -65,6 +78,7 @@
 					.append("path")
 					.attr("d", path)
 					.style("fill", "#6b9080");
+				
 			});
     </script>
 </body>
