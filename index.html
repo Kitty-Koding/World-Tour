@@ -21,6 +21,17 @@
 </head>
 <body>
     <script>
+			var frames = 1;
+			var favicon = document.getElementById('favicon');
+			var animationInterval = setInterval(function() {
+			favicon.href = "https://kitty-koding.github.io/World-Tour/frame"+frames+".gif";
+
+			frames ++;
+			if(frames>22){
+				frames = 1;
+			}
+
+			}, 500); // Change image every 500ms
         //Width and height
 			var w = window.innerWidth;
 			var h = window.innerHeight;
